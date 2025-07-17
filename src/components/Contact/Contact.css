@@ -1,0 +1,228 @@
+/* Contact section styles */
+.contact-section {
+  padding: 100px 20px;
+  background: #1e1a2b;
+  color: #e9d5ff;
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.contact-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(44, 26, 63, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.contact-wrapper h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #faccff;
+}
+
+.contact-wrapper p {
+  color: #d8b4fe;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* Form styles */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #2c1a3f;
+  color: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #9333ea;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #7e22ce;
+}
+
+/* ✅ Success message */
+.success-message {
+  margin-top: 20px;
+  color: #4ade80; /* green */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.tick {
+  font-size: 18px;
+  color: #22c55e;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 25px;
+  }
+
+  .contact-wrapper h2 {
+    font-size: 30px;
+  }
+}
+
+.success-message {
+  color: #22c55e;
+  font-size: 16px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.success-message::before {
+  content: '✔';
+  font-weight: bold;
+  color: #22c55e;
+}
+
+.contact-section {
+  padding: 80px 20px;
+  background: #1e1a2b;
+  color: #e9d5ff;
+  text-align: center;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #2c1a3f;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+  background: #3b2a4e;
+  color: #fff;
+}
+
+form button {
+  background: #9333ea;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+form button:disabled {
+  background: #7e22ce;
+  cursor: not-allowed;
+}
+
+.sent-msg {
+  color: #4ade80;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Spinner Style */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-top: 3px solid #9333ea;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Optional: Enhance button appearance while loading */
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.success-message {
+  margin-top: 20px;
+  color: #4ade80; /* Green shade */
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.tick {
+  display: inline-block;
+  font-size: 22px;
+  background-color: #4ade80;
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  animation: popTick 0.4s ease-in-out;
+}
+
+/* Fade in the entire message */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pop-in tick animation */
+@keyframes popTick {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

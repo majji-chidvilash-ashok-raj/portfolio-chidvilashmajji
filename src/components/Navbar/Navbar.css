@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+.header-main {
+  width: 100%;
+  background-color: rgba(25, 0, 51, 0.85);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 98;
+  backdrop-filter: blur(10px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 100%;
+}
+
+.left-nav {
+  color: #c084fc;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.center-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.center-nav ul li {
+  color: #f1f1f1;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.center-nav ul li:hover {
+  color: #c084fc;
+  transform: scale(1.05);
+}
+
+.right-nav button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.right-nav button:hover {
+  background-color: #c084fc;
+  color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .center-nav ul {
+    display: none; /* Hide nav links on small screens */
+  }
+
+  .right-nav button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+}
