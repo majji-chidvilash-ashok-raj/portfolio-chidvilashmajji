@@ -78,17 +78,17 @@ const About = () => {
             {
               title: 'B.Tech in Computer Science',
               school: 'SRM University, AP',
-              year: '2022 - Present',
+              year: '2024 - Present',
             },
             {
               title: 'Intermediate (Class 12)',
-              school: 'Narayana Junior College',
-              year: '2020 - 2022',
+              school: 'Sri Chaitanya Junior College',
+              year: '2022 - 2024',
             },
             {
               title: 'High School (Class 10)',
-              school: 'Vignan High School',
-              year: '2019 - 2020',
+              school: 'Sri Chaitanya EM High School',
+              year: '2021 - 2022',
             },
           ].map((item, idx) => (
             <li key={idx} ref={(el) => (eduItemsRef.current[idx] = el)}>
