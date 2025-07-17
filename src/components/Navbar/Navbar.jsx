@@ -2,7 +2,12 @@ import React from 'react';
 import './Navbar.css';
 import { motion } from 'framer-motion';
 
-const navLinks = ['Home', 'About', 'Projects', 'Contact'];
+const navLinks = [
+  { label: 'Home', id: 'hero' },
+  { label: 'About', id: 'about' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Contact', id: 'contact' },
+];
 
 const Navbar = () => {
   return (
@@ -28,7 +33,7 @@ const Navbar = () => {
           <ul>
             {navLinks.map((link, index) => (
               <motion.li
-                key={link}
+                key={link.id}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -37,7 +42,7 @@ const Navbar = () => {
                   delay: 3 + index * 0.2,
                 }}
               >
-                {link}
+                <a href={`#${link.id}`}>{link.label}</a>
               </motion.li>
             ))}
           </ul>
@@ -45,7 +50,7 @@ const Navbar = () => {
 
         {/* Right Button */}
         <div className="right-nav">
-          <motion.button
+          <motion.button 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -53,6 +58,7 @@ const Navbar = () => {
               damping: 20,
               delay: 1.5,
             }}
+            className='fancy-button'
           >
             Hire Me
           </motion.button>

@@ -44,7 +44,16 @@
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.center-nav ul li:hover {
+.center-nav ul li a{
+  color: #e9d5ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+
+.center-nav ul li a:hover {
   color: #c084fc;
   transform: scale(1.05);
 }
@@ -79,4 +88,47 @@
   .header {
     justify-content: space-between;
   }
+}
+
+.fancy-button {
+  position: relative;
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(142, 45, 226, 0.3);
+}
+
+.fancy-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-20deg);
+  transition: left 0.4s ease;
+  z-index: 2;
+}
+
+.fancy-button:hover::before {
+  left: 100%;
+}
+
+.fancy-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(142, 45, 226, 0.6);
 }

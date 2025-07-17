@@ -15,3 +15,7 @@
 #loader h3{
   font-size: 2vw;
 }
+
+html {
+  scroll-behavior: smooth;
+}

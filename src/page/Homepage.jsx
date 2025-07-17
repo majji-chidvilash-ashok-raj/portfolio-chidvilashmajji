@@ -10,13 +10,29 @@ import Footer from '../components/Footer/Footer'
 const Homepage = () => {
   return (
     <div>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Skill/>
-      <Project/>
-      <Contact/>
-      <Footer/>
+      <Navbar />
+
+      <section id="hero">
+        <Hero />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="skills">
+        <Skill />
+      </section>
+
+      <section id="projects">
+        <Project />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
+
+      <Footer />
     </div>
   )
 }
