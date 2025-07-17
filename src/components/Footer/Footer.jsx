@@ -39,17 +39,23 @@ const Footer = () => {
         </motion.p>
 
         <div className="footer-socials">
-          {['GitHub', 'LinkedIn', 'Email'].map((text, i) => (
+          {[
+            { text: 'GitHub', href: 'https://github.com/majji-chidvilash-ashok-raj' },
+            { text: 'LinkedIn', href: 'https://www.linkedin.com/in/chidvilash-ashok-raj-majji-988502324/' },
+            { text: 'Email', href: 'mailto:chidvilashmajji@gmail.com' },
+          ].map((link, i) => (
             <motion.a
               key={i}
-              href="#"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               variants={fadeInUp}
               custom={i + 3}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
-              {text}
+              {link.text}
             </motion.a>
           ))}
         </div>
