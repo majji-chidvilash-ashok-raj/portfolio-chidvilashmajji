@@ -9,7 +9,7 @@ const projects = [
   {
     title: 'Portfolio Website',
     description: 'A modern personal portfolio using React and GSAP animations.',
-    github: 'https://github.com/yourusername/portfolio',
+    github: 'https://github.com/majji-chidvilash-ashok-raj/portfolio-chidvilashmajji',
     live: '#',
     icon: '🌐',
   },
@@ -21,10 +21,10 @@ const projects = [
     icon: '📊',
   },
   {
-    title: 'Resume Generator',
-    description: 'Generates resumes from user input instantly in PDF format.',
-    github: 'https://github.com/yourusername/resume-generator',
-    live: 'https://your-resume-link.com',
+    title: 'Qr Generator',
+    description: 'Generates Qr from user input instantly using API.',
+    github: 'https://github.com/majji-chidvilash-ashok-raj/QR-Generator',
+    live: 'https://majji-chidvilash-ashok-raj.github.io/QR-Generator/',
     icon: '📄',
   },
 ];
