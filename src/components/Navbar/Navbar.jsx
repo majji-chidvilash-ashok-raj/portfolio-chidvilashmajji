@@ -60,7 +60,7 @@ const Navbar = () => {
             }}
             className='fancy-button'
           >
-            Hire Me
+            <a href="https://drive.google.com/file/d/1teVhAIhixbgcyQHbfrVgUcoweO5aCYPd/view?usp=drive_link">Resume</a>
           </motion.button>
         </div>
       </div>
