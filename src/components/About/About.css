@@ -4,67 +4,118 @@
   padding: 100px 20px;
   background: linear-gradient(to bottom right, #1e1a2b, #2c1a3f);
   color: #e9d5ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   z-index: 1;
 }
 
-.about-wrapper {
-  background: rgba(44, 26, 63, 0.85);
-  backdrop-filter: blur(8px);
-  padding: 40px;
-  border-radius: 20px;
-  max-width: 900px;
-  z-index: 2;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
   position: relative;
+  z-index: 2;
+  padding: 40px;
+  background: rgba(44, 26, 63, 0.8);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.about-wrapper h2 {
+.about-title {
+  text-align: center;
   font-size: 42px;
   margin-bottom: 20px;
   color: #faccff;
-  text-align: center;
 }
 
-.about-wrapper .intro {
+.intro {
+  text-align: center;
   font-size: 18px;
-  line-height: 1.8;
+  line-height: 1.7;
   color: #d8b4fe;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 60px;
 }
 
-.about-wrapper h3 {
-  font-size: 24px;
-  color: #c084fc;
-  margin-bottom: 15px;
+/* ==== Roadmap Timeline ==== */
+.roadmap {
+  position: relative;
+  padding: 20px 0;
 }
 
-.education {
-  list-style: none;
-  padding: 0;
+.road-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #a855f7;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
-.education li {
+.roadmap-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  z-index: 2;
+}
+
+.roadmap-item .content-box {
   background: #322345;
-  padding: 15px 20px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  color: #f3e8ff;
 }
 
-.education li span {
-  color: #a78bfa;
-  font-size: 14px;
+.roadmap-item h3 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #faccff;
+}
+
+.roadmap-item p {
+  font-size: 16px;
+  color: #c4b5fd;
+}
+
+.roadmap-item span {
   display: block;
+  font-size: 14px;
   margin-top: 4px;
+  color: #a78bfa;
+}
+
+/* Timeline Dot */
+.circle-dot {
+  width: 16px;
+  height: 16px;
+  background: #c084fc;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  z-index: 3;
+}
+
+.roadmap-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.roadmap-item.left .circle-dot {
+  right: -8px;
+}
+
+.roadmap-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.roadmap-item.right .circle-dot {
+  left: -8px;
 }
 
 /* ===== Decorative Shapes ===== */
-
 .shape {
   position: absolute;
   border-radius: 50%;
@@ -103,19 +154,35 @@
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
-  .about-wrapper {
-    padding: 25px;
+  .road-line {
+    left: 20px;
   }
 
-  .about-wrapper h2 {
-    font-size: 30px;
+  .roadmap-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    text-align: left !important;
   }
 
-  .about-wrapper .intro {
+  .roadmap-item.right {
+    left: 0;
+  }
+
+  .roadmap-item.left {
+    left: 0;
+  }
+
+  .roadmap-item .circle-dot {
+    left: 20px !important;
+    right: auto !important;
+  }
+
+  .intro {
     font-size: 16px;
   }
 
-  .education li {
-    font-size: 15px;
+  .about-title {
+    font-size: 32px;
   }
 }
