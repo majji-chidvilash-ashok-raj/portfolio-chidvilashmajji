@@ -7,11 +7,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
-    title: 'Portfolio Website',
-    description: 'A modern personal portfolio using React and GSAP animations.',
-    github: 'https://github.com/majji-chidvilash-ashok-raj/portfolio-chidvilashmajji',
-    live: '#',
-    icon: '🌐',
+    title: 'Cola-Cola Frontend',
+    description: 'A modern, stylish Coca-Cola clone website showcasing custom design and smooth animations, built and hosted by me.',
+    github: 'https://github.com/majji-chidvilash-ashok-raj/cola-cola-react-based-project',
+    live: 'https://colacola-chidvilashmajji.netlify.app/',
+    icon: '🖥️',
   },
   {
     title: 'Foodify. Food-Delivery ',
@@ -19,6 +19,13 @@ const projects = [
     github: 'https://github.com/majji-chidvilash-ashok-raj/foodify-fullstack-project',
     live: '#',
     icon: '📊',
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'A modern personal portfolio using React and GSAP animations.',
+    github: 'https://github.com/majji-chidvilash-ashok-raj/portfolio-chidvilashmajji',
+    live: '#',
+    icon: '🌐',
   },
   {
     title: 'Qr Generator',
